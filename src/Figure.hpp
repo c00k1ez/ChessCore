@@ -16,13 +16,19 @@ namespace  ChessCore
 
 		void setCoords(const FigureCoordinates &t_coords);
 
+		void setFieldCoords(const FigureCoordinates &t_field_coords);
+
+		FigureCoordinates getFieldCoords() const;
+		
+		MySprite m_sprite;
+
 		~Figure();
 
 	private:
 		FigureCoordinates m_coords;
-		MySprite m_sprite;
 		FigureType m_type;
 		PlayerType m_player;
+		FigureCoordinates m_field_coords;
 		
 	};
 

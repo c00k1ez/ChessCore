@@ -3,13 +3,19 @@
 namespace ChessCore
 {
 	
-	ChessCore::MySprite::MySprite() 
+	MySprite::MySprite() 
+	{
+
+	}
+
+	MySprite::MySprite(sf::Sprite t_sprite)
+		: m_sprite(t_sprite)
 	{
 
 	}
 
 
-	ChessCore::MySprite::~MySprite() 
+	MySprite::~MySprite() 
 	{
 
 	}

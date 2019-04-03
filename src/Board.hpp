@@ -9,13 +9,12 @@ namespace ChessCore
 	{
 
 	public:
-		Board(std::map<FigureType, MySprite> t_sprites);
+		Board(std::map<FigureType, std::map<PlayerType, MySprite> > t_sprites);
 		~Board();
 
 		void _print_board_();
-
-	private:
 		std::vector< std::vector<Figure> > m_board;
+
 		
 	};
 

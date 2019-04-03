@@ -28,6 +28,14 @@ namespace ChessCore
 		m_coords = t_coords;
 	}
 
+	void Figure::setFieldCoords(const FigureCoordinates &t_field_coords)
+	{
+		m_field_coords = t_field_coords;
+	}
 
+	FigureCoordinates Figure::getFieldCoords() const
+	{
+		return m_field_coords;
+	}
 
 }

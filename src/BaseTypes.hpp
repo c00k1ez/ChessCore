@@ -1,6 +1,9 @@
 #ifndef BASE_TYPES_HPP
 #define BASE_TYPES_HPP
 
+#include <SFML/Graphics.hpp>
+
+
 namespace ChessCore 
 {
 
@@ -12,11 +15,21 @@ namespace ChessCore
 
 	} FigureCoordinates;
 
+	typedef struct 
+	{
+		
+		int x;
+		int y;
+
+	} FieldCoordinates;
+
 	class MySprite 
 	{
 	public:
+		MySprite(sf::Sprite t_sprite);
 		MySprite();
 		~MySprite();
+		sf::Sprite m_sprite;
 		
 	};
 
@@ -37,14 +50,6 @@ namespace ChessCore
 		Player_2,
 		None_player
 	};
-
-	template <class T> 
-	void swap (T &t_a, T &t_b)
-	{
-		T tmp = t_a;
-		t_a = t_b;
-		t_b = t_a;
-	}
 
 }
 
