@@ -19,8 +19,16 @@ namespace  ChessCore
 		void setFieldCoords(const FigureCoordinates &t_field_coords);
 
 		FigureCoordinates getFieldCoords() const;
+
+		FigureType getType() const;
+
+		PlayerType getPlayer() const;
 		
 		MySprite m_sprite;
+
+		void setType(FigureType t);
+
+		void setPlayer(PlayerType p); 
 
 		~Figure();
 

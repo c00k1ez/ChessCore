@@ -38,4 +38,24 @@ namespace ChessCore
 		return m_field_coords;
 	}
 
+	FigureType Figure::getType() const
+	{
+		return m_type;
+	}
+
+	PlayerType Figure::getPlayer() const
+	{
+		return m_player;
+	}
+
+	void Figure::setType(FigureType t)
+	{
+		m_type = t;
+	}
+
+	void Figure::setPlayer(PlayerType p)
+	{
+		m_player = p;
+	}
+
 }
