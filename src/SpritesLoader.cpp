@@ -37,12 +37,12 @@ namespace ChessCore
 			s1.setTexture(c_txt); s2.setTexture(c_txt);
 			if(i != 5)
 			{
-				s1.setTextureRect(sf::IntRect(i * 100, 0, 100, 100));
-				s2.setTextureRect(sf::IntRect(i * 100, 300, 100, 100));
+				s1.setTextureRect(sf::IntRect(i * 90, 0, 90, 90));
+				s2.setTextureRect(sf::IntRect(i * 90, 270, 90, 90));
 			} else
 			{
-				s1.setTextureRect(sf::IntRect(0, 100, 100, 100));
-				s2.setTextureRect(sf::IntRect(0, 200, 100, 100));
+				s1.setTextureRect(sf::IntRect(0, 90, 90, 90));
+				s2.setTextureRect(sf::IntRect(0, 180, 90, 90));
 			}
 			MySprite _s1(s1), _s2(s2);
 			m.insert({player[0], _s1});

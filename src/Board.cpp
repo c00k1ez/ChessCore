@@ -64,7 +64,7 @@ namespace  ChessCore
 		m_board.push_back(_pawns[1]);
 		m_board.push_back(_backLine[1]);
 
-		int x_0 = 30, y_0 = 30;
+		int x_0 = 35, y_0 = 35;
 
 		for(int i = 0; i < 8; ++i)
 		{

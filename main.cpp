@@ -43,21 +43,21 @@ int main(int argc, char const *argv[])
 
             if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && 
             	s.getGlobalBounds().contains(pos.x, pos.y) && 
-            	((pos.x - 20) >=0 && (pos.y - 20) >= 0))
+            	((pos.x - 35) >=0 && (pos.y - 35) >= 0))
             {
-            	//cout << (int(pos.x - 20) / 100) << " " << (int(pos.y - 20) / 100) << endl;
+            	cout << (int(pos.x - 35) / 90) << " " << (int(pos.y - 35) / 90) << endl;
             	if(!isPressed)
             	{
             		isPressed = true;
-            		x_start = (int(pos.x - 20) / 100);
-            		y_start = (int(pos.y - 20) / 100);
-            		cout << "X_start = " << x_start << " y_start = " << y_start << endl;
+            		x_start = (int(pos.x - 35) / 90);
+            		y_start = (int(pos.y - 35) / 90);
+            		//cout << "X_start = " << x_start << " y_start = " << y_start << endl;
             	} else
             	{
             		isPressed = false;
-            		x_end = (int(pos.x - 20) / 100);
-            		y_end = (int(pos.y - 20) / 100);
-            		cout << "X_end = " << x_start << " y_end = " << y_end << endl;
+            		x_end = (int(pos.x - 35) / 90);
+            		y_end = (int(pos.y - 35) / 90);
+            		//cout << "X_end = " << x_start << " y_end = " << y_end << endl;
             		swap(brd.m_board[y_start][x_start], brd.m_board[y_end][x_end]);
             		Vector2f _pos1 = brd.m_board[y_start][x_start].m_sprite.m_sprite.getPosition();
             		Vector2f _pos2 = brd.m_board[y_end][x_end].m_sprite.m_sprite.getPosition();
