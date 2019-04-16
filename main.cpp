@@ -13,7 +13,7 @@ using namespace sf;
 const int board_size = 800;
 const int x_0 = 30, y_0 = 30;
 
-
+int STEP = 0;
 
 
 
@@ -70,11 +70,10 @@ int main(int argc, char const *argv[])
             	else
             	{
             		isPressed = false;
-            		player_iter = (player_iter + 1) % 2;
             		x_end = (int(pos.x - 35) / 90);
             		y_end = (int(pos.y - 35) / 90);
             		
-            		if(brd.m_board[y_end][x_end].getType() == EMPTY)
+            		if(brd.m_board[y_end][x_end].getType() == EMPTY && (x_start != x_end || y_start != y_end))
             		{
 	            		if(Behavior::check(brd.m_board[y_start][x_start], brd.m_board[y_end][x_end]))
 	            		
@@ -86,6 +85,8 @@ int main(int argc, char const *argv[])
 	            		{
 	            			isPressed = true;
 	            		}
+	            		player_iter = (player_iter + 1) % 2;
+	            		STEP ++;
             		} 
             		else
             		{
@@ -93,6 +94,7 @@ int main(int argc, char const *argv[])
             			{
             				Behavior::deleteFigure(brd.m_board[y_end][x_end], sprites[EMPTY][None_player]);
             				Behavior::mySwap(brd.m_board[y_start][x_start], brd.m_board[y_end][x_end]);
+            				//cout << "X_end = " << x_start << " y_end = " << y_end << endl;
             			} 
             			else
             			{
